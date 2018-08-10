@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 
 const Footer = () => {
   return (
-footer.bg-dark.text-white.mt-5.p-4.text-center 
+    <footer className="bg-dark text-white mt-5 p-4 text-center">
+      Copyright &copy; {new Date().getFullYear()}
+    </footer>
   )
 }
 
 export default Footer;
-1235    098
