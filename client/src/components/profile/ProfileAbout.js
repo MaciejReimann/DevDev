@@ -38,4 +38,8 @@ class ProfileAbout extends React.Component {
   };
 };
 
+ProfileAbout.propTypes = {
+  profile: PropTypes.object.isRequired
+};
+
 export default ProfileAbout;
