@@ -9,7 +9,7 @@ const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 
 const app = express();
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
