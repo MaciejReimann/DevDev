@@ -1,7 +1,7 @@
 {
-  "name": "devcon",
+  "name": "devdev",
   "version": "1.0.0",
-  "description": "Social network for developers",
+  "description": "Pair programming platform",
   "main": "serverjs",
   "scripts": {
     "client-install": "cd client && npm install",
