@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const path = require("path");
 
+// Import router
 const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
@@ -22,7 +23,7 @@ const db = require("./config/keys").mongoURI;
 mongoose
   .connect(db)
   .then(() => console.log("MongoDB connected!"))
-  .catch(err => console(err));
+  .catch(err => console.log(err));
 
 // Passport middleware
 app.use(passport.initialize());
