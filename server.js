@@ -28,7 +28,7 @@ mongoose
 // Passport middleware
 app.use(passport.initialize());
 
-// Passport Config
+// Passport Config      
 require("./config/passport")(passport);
 
 // Use Routes
@@ -44,7 +44,7 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
-}
+};
 
 const PORT = process.env.PORT || 5000;
 
