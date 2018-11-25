@@ -10,7 +10,7 @@ const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 
 const app = express();
-// console.log(process.env.NODE_ENV);
+
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -47,5 +47,7 @@ if (process.env.NODE_ENV === "production") {
 };
 
 const PORT = process.env.PORT || 5000;
+console.log(process.env.NODE_ENV); // development
 
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+
