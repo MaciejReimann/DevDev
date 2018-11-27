@@ -19,7 +19,7 @@ class Landing extends Component {
             <div className="row">
               <div className="col-md-12 text-center">
                 <h1 className="display-3 mb-4">devpairs</h1>
-                <p className="lead"> Do some pair programming </p>
+                <p className="lead"> Do some pair programming !</p>
                 <hr />
                 <Link to="/register" className="btn btn-lg btn-info mr-2">Sign Up</Link>
                 <Link to="/login" className="btn btn-lg btn-light">Login</Link>
