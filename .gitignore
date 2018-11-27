@@ -1,4 +1,16 @@
-/node_modules
-/package-lock.json
-/config/keys_dev.js
-/client/src/config
+# Node build artifacts
+node_modules
+npm-debug.log
+
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Keys
+server/config/keys_dev.js
+client/src/config

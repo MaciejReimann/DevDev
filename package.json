@@ -1,16 +1,23 @@
 {
-  "name": "devdev",
+  "name": "devpairs",
   "version": "1.0.0",
   "description": "Pair programming platform",
-  "main": "serverjs",
-  "scripts": {
-    "client-install": "cd client && npm install",
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "set NODE_ENV=development && concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install npm run build"
+  "engines": {
+    "node": "8.9.x"
   },
+  "scripts": {
+    "locally": "npm install && cd client && npm install && cd.. && npm run dev",
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client \" ",
+    "publish": "git push heroku master && heroku open",
+    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
   "author": "Maciej Reimann",
   "license": "MIT",
   "dependencies": {
@@ -24,6 +31,10 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "validator": "^10.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaciejReimann/DevDev"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
